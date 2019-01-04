@@ -102,7 +102,7 @@ public class UserController {
      */
     @RequestMapping(value = "/update",method = RequestMethod.POST)
     @ResponseBody
-    public boolean update(@RequestBody User u) {
+    public boolean update(@ModelAttribute  User u) {
         User user = null;
         userServiceImpl.update(u);
         int id = u.getId();
